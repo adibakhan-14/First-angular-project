@@ -1,0 +1,25 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <div class="container">
+       
+        <form #addOrderForm= "ngForm" (ngSubmit)="addOrderSubmit(addOrderForm.value)">
+           <div class="form-group"> 
+                <h1 class="text-center text-primary">Order ADD</h1>  
+                 <div class="input-group-prepend">  
+                      <input type="text" #addOrder class="form-control" placeholder="Add Order" name="addOrder" ngModel>  
+                      <p>{{addOrder.value}}</p>       
+                      <span class="input-group-text" (click)="addorders(addOrder.value)"><i class="material-icons">add</i></span>
+                          </div>
+                          </div> 
+                        
+
+
+                    <div class="data"> 
+                         <ul class="list-instyled"> 
+                               <li *ngFor="let addOrder of addOrderArray">{{addOrder}}<i (click)="deleteItem(addOrder)" class="material-icons">delete</i></li>
+                               
+  
+                            </ul> 
+                             </div>   
+                             
+                            </form>
+                        </div>
