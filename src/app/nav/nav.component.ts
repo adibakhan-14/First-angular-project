@@ -14,7 +14,7 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class NavComponent {
 
-  menuItems: any[] = ['dashboard', 'orders'];
+  menuItems: any[] = ['dashboard', 'orders', 'customer'];
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(

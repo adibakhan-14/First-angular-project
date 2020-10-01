@@ -18,6 +18,8 @@ import { TotalTargetValueComponent } from './dashboard/total-target-value/total-
 import { TotalCancelledOrdersComponent } from './dashboard/total-cancelled-orders/total-cancelled-orders.component';
 import { AddOrdersComponent } from './add-orders/add-orders.component';
 import { ChartsModule } from 'ng2-charts';
+import { CustomerComponent } from './customer/customer.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,8 @@ import { ChartsModule } from 'ng2-charts';
     TotalProductsComponent,
     TotalTargetValueComponent,
     TotalCancelledOrdersComponent,
-    AddOrdersComponent
+    AddOrdersComponent,
+    CustomerComponent
     
   ],
   imports: [
@@ -41,7 +44,8 @@ import { ChartsModule } from 'ng2-charts';
     MatIconModule,
     MatListModule,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

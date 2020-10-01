@@ -1,0 +1,30 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+<div class= "container">
+
+  <form formGroupName="customerProfile" (ngSubmit)="onSubmit()">
+      <div class="form-group>">
+          <label>Name</label>
+          <input type="text" class= "form-control" formControlName="name" placeholder="name">
+      </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div>
+        <label>
+            Phone
+            <input type="number" formControlName="number">
+          </label>
+      
+    </div>
+    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+    <button type="submit" class="btn btn-primary" [disabled]="!customerProfile.valid">Submit</button>
+  </form>
+
+  
